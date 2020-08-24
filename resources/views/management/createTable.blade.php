@@ -12,7 +12,7 @@
             </div>
         </div>
 
-        <div class="col-md-8"><i class="fas fa-align-justify"></i> Create a Category
+        <div class="col-md-8"><i class="fas fa-chair"></i> Create a Table
 
         <hr>
         @if($errors->any())
@@ -27,11 +27,11 @@
         </div>
 
         @endif
-        <form action="/management/category" method="POST">
+        <form action="/management/table" method="POST">
             @csrf
             <div class="form-group">
-                <label for="categoryName">Category Name </label>
-                <input type="text" name="name" class="forn-control" placeholder="Category...">
+                <label for="tableName">Table Name </label>
+                <input type="text" name="name" class="forn-control" placeholder="Table...">
             </div>
             <button type="submit" class="btn btn-primary">Save</button>
         </form>

@@ -22,7 +22,7 @@
                         </div>
                         <div class="col-4">
                                 <a href="/cashier">
-                            <h4>Casier</h4>
+                            <h4>Cashier</h4>
                             <img width = "50px" src="{{ asset('images/cashier.png') }}">
                                 </a>
                         </div>
