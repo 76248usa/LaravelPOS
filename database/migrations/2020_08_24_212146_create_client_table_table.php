@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMenuPricesTable extends Migration
+class CreateClientTableTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class CreateMenuPricesTable extends Migration
      */
     public function up()
     {
-        Schema::create('menu_prices', function (Blueprint $table) {
+        Schema::create('client_table', function (Blueprint $table) {
             $table->id();
+            $table->integer('client_id');
+            $table->integer('table_id');
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ class CreateMenuPricesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('menu_prices');
+        Schema::dropIfExists('client_table');
     }
 }

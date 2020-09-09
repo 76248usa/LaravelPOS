@@ -30,9 +30,16 @@ Route::get('/management', function () {
 Route::resource('/cashier', 'Cashier\CashierController');
 Route::get('/cashier/createTableMenus/{name}', 'Cashier\CashierController@createTableMenus');
 Route::get('cashier/singleTable/{id}', 'Cashier\CashierController@showSingleTable');
-Route::post('/cashier/storeMenuTable/{id}', 'Cashier\CashierController@storeMenuTable');
+
+Route::post('/cashier/storeMenuTable/{id}', 'Cashier\CashierController@storeClientTable');
+Route::get('/cashier/singleTable/{id}', 'Cashier\CashierController@showSingleTable');
 
 Route::resource('/management/category', 'Management\CategoryController');
+Route::resource('/management/client', 'Management\ClientController');
+
+Route::get('/cashier/createClientMenus/{id}', 'Cashier\CashierController@createClientMenus');
+Route::post('/cashier/storeClientMenus/{id}', 'Cashier\CashierController@storeClientMenus');
+
 
 //Route::get('management/category/{category}/edit', 'Management\CategoryController@edit');
 
